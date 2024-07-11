@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    
+    <style>
+       
+        /* styles.css */
+    
+        * {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    
+        /* Topbar Styles */
+        .topbar {
+            background-color:#007bff;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 23px;
+            font-size: 16px;
+            
+        }
+    
+        .hover:hover {
+            transform: scale(1.1);
+        }
+    
+        .topbar div {
+            display: flex;
+            align-items: center;
+        }
+    
+        .topbar i {
+            margin-right: 5px;
+        }
+    
+       
+/* nav bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:white;
+    padding: 10px 20px;
+    color:purple;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 70px;
+    margin-right: 10px;
+}
+
+#compname {
+    font-size: 28px;
+}
+
+.navbar-links a {
+    color:black;
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 21px;
+}
+.navbar-links a:hover {
+   /* background-color:greenyellow;*/
+   background-color: rgb(209, 123, 62);
+   padding: 11px;
+   border-radius: 5px;
+   
+}
+
+
+
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons a {
+    color: purple;
+    text-decoration: none;
+    margin-right: 30px;
+    display: inline-block;
+    
+}
+.social-icons a:hover{
+    transform: scale(1.8);
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: black;
+    margin: 4px;
+}
+
+
+    
+
+    
+        /* Carousel Styles */
+        .carousel-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+    
+        .carousel-slide {
+            min-width: 100%;
+            flex: 0 0 auto;
+            position: relative;
+        }
+    
+        .carousel-slide img {
+            width: 100%;
+            height: 570px;
+            display: block;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+    
+        .carousel-content {
+            position: absolute;
+            bottom: 230px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color:purple;
+            width: 100%;
+            max-width: 800px;
+            background-color: rgba(236, 227, 227, 0.6);
+            padding: 20px;
+            padding-bottom: 40px;
+            border-radius: 10px;
+            
+            
+        }
+    
+        .carousel-content h1 {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+    
+        .carousel-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+    
+        .carousel-content .probtn {
+            margin: 0 10px;
+        }
+    
+        .carousel-prev,
+        .carousel-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            padding: 10px;
+            border-radius: 50%;
+            z-index: 100;
+        }
+    
+        .carousel-prev {
+            left: 20px;
+        }
+    
+        .carousel-next {
+            right: 20px;
+        }
+        
+        
+      
+ 
+     
+        /* footer */
+        .footer {
+    margin-top: 60px;
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    height: auto; /* Adjusted for responsive height */
+    
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 70px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+}
+
+.footer-column h3 {
+    border-bottom: 1px solid #901111;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 10px 0;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+    color: purple;
+}
+
+.footer-column .contact-info p {
+    margin: 5px 0;
+}
+
+.footer-column .social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footer-column .logo img {
+    max-width: 90px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 20px;
+   
+    margin-top: 20px;
+}
+
+.contact-info {
+    font-size: 21px;
+    padding-top: -1px;
+    line-height: 1.4;
+
+}
+.social-mediafoo{
+
+    margin-right: 20px;
+}
+.social-iconsfoo a {
+    color: purple;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 30px;
+    
+    
+}
+.social-iconsfoo a:hover{
+    transform: scale(1.8);
+}
+        
+    
+
+    
+
+
+        
+
+
+
+
+        @media (max-width: 768px) {
+            .topbar {
+                flex-direction: column;
+                text-align: center;
+                font-size: 15px;
+            }
+    
+            .topbar div {
+                margin: 5px 0;
+            }
+            #ad{
+                margin-top: -20px;
+                margin-left: 20px;
+            
+            }
+            .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .navbar-brand {
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+    }
+    
+
+    .social-media {
+        margin-top: 3px;
+        width: 100%;
+        justify-content: center;
+        margin-left: 30px;
+    }
+
+    .navbar-toggle {
+
+        display: flex;
+    }
+
+        .carousel-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        
+   
+    
+            .carousel-content {
+    
+               background-color: rgba(236, 227, 227, 0.6);
+                position: absolute;
+                top: 39%;
+                bottom: 200px;
+                left: 50%;
+                height: 50px;
+                width: 500px;
+                
+
+               
+               
+               
+            }
+    
+            .carousel-content h1 {
+                margin-top: -10px;
+                font-size: 1.8rem;
+            }
+    
+            .carousel-content p {
+                font-size: 1rem;
+            }
+    
+            
+        
+    
+            .navbar-toggle {
+                display: flex;
+                align-self: flex-end;
+                margin-top: 10px;
+            }
+    
+            .carousel-slide img {
+                height: 220px;
+                object-fit: cover;
+            }
+
+
+            /* footer */
+            .footer {
+        padding: 10px 0;
+        height: auto; /* Adjust for responsive height */
+        
+    }
+
+    .footer-container {
+        margin-top: -10px;
+        flex-direction: column;
+        align-items:flex-start;
+        padding: 0 10px;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .footer-column .social-links {
+        justify-content: center;
+    }
+
+    .footer-column h3 {
+        margin-top: -20px;
+        font-size: 20px; /* Adjust font size for mobile */
+    }
+
+    .footer-column ul li a {
+        font-size: 17px; /* Adjust font size for mobile */
+    }
+
+    .footer-column .social-links a {
+        font-size:17px; /* Adjust font size for mobile */
+    }
+
+    .contact-info {
+        font-size: 17px; /* Adjust font size for mobile */
+
+      
+   
+}
+
+    
+    .social-media {
+    display: flex;
+    align-items: center;
+   
+}
+
+.social-iconsfoo a {
+    color: purple;
+    text-decoration: none;
+    display: inline-block;
+
+   
+    
+}
+.social-iconsfoo a:hover{
+    transform: scale(1.8);
+}
+footer-column h3 {
+    border-bottom: 0;
+    
+}
+
+
+        }
+     
+       
+    
+    
+    </style>
+</head>
+<body>
+    <!-- top bar -->
+    <div class="topbar">
+        <div class="hover">
+            <i class="fa fa-map-marker-alt" style="color:white;" id="ad"></i>
+            <span>Ambattur Industrial Estate, Chennai, Tamil Nadu 600095</span>
+        </div>
+        <div class="hover">
+            <i class="fa fa-envelope-open "style="color:white;" ></i>
+            <a href="mailto:www.flexipacsolutions.com">www.flexipacsolutions.com</a>
+        </div>
+        <div class="hover">
+            <i class="fa fa-phone-alt " style="color:white;"></i>
+            <span>+91-9677388776</span>
+        </div>
+        <div class="hover">
+            <i class="far fa-clock" style="color:white;"></i>
+            <span>Mon - Fri : 9AM - 9PM</span>
+        </div>
+    </div>
+    <!-- top bar ends -->
+     <!-- nav bar starts -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="index.html"><img src="/img/logo_flexipac-removebg-preview.png" alt="Flexipac Solutions Logo"></a>
+            <h2 id="compname">Flexipac Solutions</h2>
+        </div>
+        <div class="navbar-links" id="navbarLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="cap_faci.html">Capabilities & Facilities</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="social-media">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="navbar-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- nav bar ends -->
+
+     <!-- carousal starts -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="/img/IMG_7062.jpeg" alt="Carousel Image 1">
+                <div class="carousel-content">
+                    <h1>Contact Us</h1>
+                    
+                </div>
+            </div>
+           
+           
+        </div>
+        
+    </div>
+  <!-- carousal ends -->
+
+  
+
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+           
+            <div class="footer-column logo">
+               <a href="index.html"><img src="/img/logo_flexipac-removebg-preview.png" alt="Company Logo"></a> 
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cap_faci.html">Capabilities & Facilities</a></li>
+                    <li><a href="#Contact.html">Contact</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Information</h3>
+                <div class="hover">
+                    <i class="fa fa-map-marker-alt" style="color:white;"></i>
+                    <span>Ambattur Industrial Estate, Chennai, Tamil Nadu 600095</span>
+
+                </div>
+                <br>
+                <div class="hover">
+                    <i class="fa fa-envelope-open "style="color:white;" ></i>
+                    <a href="mailto:www.flexipacsolutions.com">www.flexipacsolutions.com</a>
+                    <br>
+                </div>
+                <br>
+                <div class="hover">
+                    <i class="fa fa-phone-alt " style="color:white;"></i>
+                    <span>+91-9677388776</span>
+                </div>
+                <br>
+                <div class="hover">
+                    <i class="far fa-clock" style="color:white;"></i>
+                    <span>Mon - Fri : 9AM - 9PM</span>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-mediafoo">
+                    <div class="social-iconsfoo" style="margin-left: 70px;" >
+                      <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="#">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                      <a href="#">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                     </div>
+                  </div>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Flexipac Solutions. All rights reserved.</p>
+        </div>
+    </footer>     
+
+    
+
+        
+<script>
+      function toggleMenu() {
+    var navbarLinks = document.getElementById('navbarLinks');
+    if (navbarLinks.style.display === 'flex') {
+        navbarLinks.style.display = 'none';
+    } else {
+        navbarLinks.style.display = 'flex';
+    }
+}
+
+</script>
+      
+
+</body>
+</html>

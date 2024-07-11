@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexipac Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        * {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    
+        /* Topbar Styles */
+        .topbar {
+            background-color:#007bff;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 23px;
+            font-size: 16px;
+            
+        }
+    
+        .hover:hover {
+            transform: scale(1.1);
+        }
+    
+        .topbar div {
+            display: flex;
+            align-items: center;
+        }
+    
+        .topbar i {
+            margin-right: 5px;
+        }
+    
+       
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color:white;
+            padding: 10px 20px;
+            color:purple;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            height: 70px;
+            margin-right: 10px;
+        }
+
+        #compname {
+            font-size: 28px;
+        }
+
+        .navbar-links a {
+            color:black;
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 21px;
+        }
+        .navbar-links a:hover {
+        /* background-color:greenyellow;*/
+        background-color: rgb(209, 123, 62);
+        padding: 11px;
+        border-radius: 5px;
+        
+        }
+
+
+
+
+        .navbar-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .social-media {
+            display: flex;
+            align-items: center;
+        }
+
+        .social-icons a {
+            color: purple;
+            text-decoration: none;
+            margin-right: 30px;
+            display: inline-block;
+            
+        }
+        .social-icons a:hover{
+            transform: scale(1.8);
+        }
+
+        .navbar-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .navbar-toggle span {
+            height: 3px;
+            width: 25px;
+            background-color: black;
+            margin: 4px;
+        }
+
+
+    
+
+    
+        /* Carousel Styles */
+        .carousel-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+    
+        .carousel-slide {
+            min-width: 100%;
+            flex: 0 0 auto;
+            position: relative;
+        }
+    
+        .carousel-slide img {
+            width: 100%;
+            height: 700px;
+            display: block;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+    
+        .carousel-content {
+            position: absolute;
+            bottom: 230px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color:purple;
+            width: 100%;
+            max-width: 800px;
+            background-color: rgba(236, 227, 227, 0.6);
+            padding: 20px;
+            padding-bottom: 40px;
+            border-radius: 10px;
+        }
+    
+        .carousel-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+    
+        .carousel-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+    
+        .carousel-content .probtn {
+            margin: 0 10px;
+        }
+    
+        .carousel-prev,
+        .carousel-next {
+            position: absolute;
+            top: 60%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            padding: 10px;
+            border-radius: 50%;
+            z-index: 100;
+        }
+    
+        .carousel-prev {
+            left: 20px;
+        }
+    
+        .carousel-next {
+            right: 20px;
+        }
+    
+        /* Facts Section */
+        .facts-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 80px;
+            justify-content: center;
+            
+           
+        }
+    
+        .probtn {
+            background-color:#007bff;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            color: white;
+        }
+    
+        .probtn:hover {
+            background-color:rgb(209, 123, 62);
+        }
+    
+        .fact {
+            background-color:rgba(0, 123, 255,0.886);
+            margin-left: 80px;
+            width: 350px;
+            height: 300px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(26, 57, 98);
+            opacity: 0.8;
+            border-radius: 25px;
+        }
+        .fact h1{
+            margin-top: 10px;
+        }
+       
+        .fact h5 {
+            margin: 20px 0;
+            font-size: 23px;
+            color:white
+        }
+    
+        .fact p {
+            color:white;
+            text-align: justify;
+            padding: 20px;
+            font-size: 17px;
+        }
+        #ficon {
+            display: inline-block;
+            color:black;
+            font-size: 50px;
+            margin-top: 20px;
+        }
+        .headingab{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+        }
+        .about-section {
+            overflow: hidden;
+            margin-right: 200px;
+            height: 600px;
+            background-color:rgba(204, 190, 179, 0.544);
+            width: 100%;
+            margin-top: 50px;
+        }
+    
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1500px;
+            margin-left: 250px;
+        }
+    
+        .about-row {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            
+        }
+    
+        .about-image {
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+    
+        .about-image img {
+            width: 650px;
+            height: 600px;
+            object-fit: contain;
+        }
+        .about-divider{
+        
+            margin-top: -100px;
+        }
+    
+        .about-text {
+            display: flex;
+            justify-content: center;
+            margin-right: 300px;
+            position: relative;
+            width: 800px;
+            height: 400px;
+            margin-left: 600px;
+            margin-top: -350px;
+        }
+    
+        .about-text-inner {
+            max-width: 600px;
+        }
+    
+        .abtheading{
+            margin-top: 50px;
+            font-size: 30px;
+            text-align: center;
+            color: purple;
+        
+        }
+        .abtp {
+            margin-top: 30px;
+            line-height: 1.7;
+            text-align: justify;
+            font-size: 20px;
+            
+        }
+    
+        .about-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: #007bff;
+            color: white;
+            border-radius: 9999px;
+            text-decoration: none;
+            margin-top:10px;
+            margin-left: 210px;
+            
+        }
+    
+        .about-button:hover {
+            background-color: rgb(209, 123, 62);
+        }
+        
+    
+
+
+        .gallery{
+            min-height: 100vh;
+            background:#eee;
+            padding-bottom: 100px;
+            margin-top: 40px;
+
+        }
+
+        .gallery .controls{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding:20px 0;
+            list-style: none;
+        }
+
+        .gallery .controls .buttons{
+            
+            height:40px;
+            width: auto;
+            background:#fff;
+            color:#666;
+            font-size: 20px;
+            line-height: 40px;
+            cursor: pointer;
+            margin:20px;
+            box-shadow: 0 3px 5px rgba(0,0,0,.3);
+            text-align: center;
+
+        margin: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+        
+        flex: auto;
+        }
+
+        .gallery .controls .buttons.active{
+    
+            color:#fff;
+        }
+
+        .gallery .image-container{
+            display: flex;
+            align-items: flex-start;
+            justify-content:center;
+            flex-wrap: wrap;
+        }
+
+        .gallery .image-container .image{
+            height:450px;
+            width: 450px;
+            overflow: hidden;
+            border:15px solid #fff;
+            box-shadow: 0 3px 5px rgba(0,0,0,.3);
+            margin: 20px;
+        }
+
+        .gallery .image-container .image img{
+            height: 100%;
+            width:100%;
+            object-fit: fill;
+        }
+
+        
+        
+        .heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px;
+        }
+       .footer {
+            margin-top: 60px;
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            text-align: center;
+            height: auto; /* Adjusted for responsive height */
+            
+        }
+
+      .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            margin-top: 70px;
+      }
+
+      .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px 0;
+        }
+
+      .footer-column h3 {
+            border-bottom: 1px solid #901111;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin: 10px 0;
+        }
+
+        .footer-column ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 21px;
+        }
+
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+            color: purple;
+        }
+
+        .footer-column .contact-info p {
+            margin: 5px 0;
+        }
+
+        .footer-column .social-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .footer-column .logo img {
+            max-width: 90px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 10px 20px;
+        
+            margin-top: 20px;
+        }
+
+        .contact-info {
+            font-size: 21px;
+            padding-top: -1px;
+            line-height: 1.4;
+
+        }
+        .social-mediafoo{
+
+            margin-right: 20px;
+        }
+        .social-iconsfoo a {
+            color: purple;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 30px;
+            
+            
+        }
+        .social-iconsfoo a:hover{
+            transform: scale(1.8);
+        }
+
+            
+                /* Responsive Styles */
+                @media (max-width: 768px) {
+                    .topbar {
+                        flex-direction: column;
+                        text-align: center;
+                        font-size: 15px;
+                    }
+            
+                    .topbar div {
+                        margin: 5px 0;
+                    }
+                    #ad{
+                        margin-top: -20px;
+                        margin-left: 20px;
+                    
+                    }
+                    .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                height: auto;
+            }
+
+            .navbar-brand {
+                justify-content: center;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .navbar-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .navbar-links a {
+                padding: 10px;
+                width: 100%;
+                text-align: center;
+                font-size: 15px;
+            }
+            
+
+            .social-media {
+                margin-top: 3px;
+                width: 100%;
+                justify-content: center;
+                margin-left: 30px;
+            }
+
+            .navbar-toggle {
+
+                display: flex;
+            }
+
+
+
+                
+                    
+            
+                    .carousel-content {
+                        width: 100%;
+                    background-color: rgba(236, 227, 227, 0.6);
+                        position: absolute;
+                        top: 24%;
+                        bottom: 200px;
+                        left: 50%;
+                        height: 180px;
+                        width: 380px;
+                    
+                    
+                    
+                    }
+            
+            .carousel-content h1 {
+                font-size: 20px;
+            }
+    
+            .carousel-content p {
+                font-size: 16px;
+            }
+            .probtn {
+            background-color:#007bff;
+            padding: 10px;
+            border-radius: 9999px;
+            color: white;
+        }
+            .facts-section {
+                flex-direction: column;
+                width: 100%;
+            
+            }
+    
+            .fact {
+                margin-bottom: 10px;
+            }
+            
+        .fact {
+            background-color:rgba(0, 123, 255,0.886);
+            margin-left: -50px;
+            width: 350px;
+            height: 300px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(26, 57, 98);
+            opacity: 0.8;
+            border-radius: 25px;
+        }
+        .fact h1{
+            margin-top: 10px;
+        }
+       
+        .fact h5 {
+            margin: 20px 0;
+            font-size: 23px;
+            color:white
+        }
+    
+        .fact p {
+            color:white;
+            text-align: justify;
+            padding: 20px;
+            font-size: 17px;
+        }
+        #ficon {
+            display: inline-block;
+            color:black;
+            font-size: 50px;
+            margin-top: 20px;
+        }
+            
+        
+    
+            .navbar-toggle {
+                display: flex;
+                align-self: flex-end;
+                margin-top: 10px;
+            }
+    
+            .carousel-slide img {
+                height: 320px;
+            }
+    
+            .about-section {
+                margin-right: 0;
+                height: auto;
+                margin-top: 40px;
+            }
+    
+            .about-container {
+                margin-top:15px;
+                margin-left: 0;
+                max-width: 100%;
+                padding: 0 20px;
+            }
+    
+            .about-image {
+                width: 100%;
+                height: auto;
+            }
+    
+            .about-image img {
+                width: 100%;
+                height: auto;
+                margin-left: 3px;
+            }
+    
+            .about-text {
+                margin: 0;
+                width: 100%;
+                margin-top: 20px;
+                
+            }
+            .abtheading{
+            margin-top: 90px;
+            font-size: 20px;
+            text-align: center;
+            color: purple;}
+            .abtp {
+            margin-top: 30px;
+            line-height: 1.7;
+            text-align: justify;
+            font-size: 20px;
+            
+        }
+    
+        .about-button {
+            display: inline-block;
+            padding:15px;
+            background-color: #007bff;
+            color: white;
+            border-radius:35px;
+            text-decoration: none;
+            margin-top:10px;
+            margin-left: 120px;
+            
+        }
+        .abtp {
+            margin-top: 20px;
+            line-height: 1.7;
+            text-align: justify;
+            font-size: 16px;
+            
+        }
+
+        /* gallery */
+        .gallery .image-container .image{
+            height:400px;
+            width: 450px;
+            overflow: hidden;
+            border:15px solid #fff;
+            box-shadow: 0 3px 5px rgba(0,0,0,.3);
+            margin: 20px;
+        }
+
+        .gallery .image-container .image img{
+            height: 100%;
+            width:100%;
+            object-fit: fill;
+        }
+    
+    
+            
+            .heading{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 60px;
+                font-size: 30px;
+                }
+                .footer {
+        padding: 10px 0;
+        height: auto; /* Adjust for responsive height */
+        
+    }
+
+    .footer-container {
+        margin-top: -10px;
+        flex-direction: column;
+        align-items:flex-start;
+        padding: 0 10px;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .footer-column .social-links {
+        justify-content: center;
+    }
+
+    .footer-column h3 {
+        margin-top: -20px;
+        font-size: 20px; /* Adjust font size for mobile */
+    }
+
+    .footer-column ul li a {
+        font-size: 17px; /* Adjust font size for mobile */
+    }
+
+    .footer-column .social-links a {
+        font-size:17px; /* Adjust font size for mobile */
+    }
+
+    .contact-info {
+        font-size: 17px; /* Adjust font size for mobile */
+
+      
+   
+}
+
+    
+    .social-media {
+    display: flex;
+    align-items: center;
+   
+}
+
+.social-iconsfoo a {
+    color: purple;
+    text-decoration: none;
+    display: inline-block;
+
+   
+    
+}
+.social-iconsfoo a:hover{
+    transform: scale(1.8);
+}
+footer-column h3 {
+    border-bottom: 0;
+    
+}
+
+
+            
+          
+        }
+    
+   
+
+        
+    </style>
+</html>   
+<body>
+    <div class="topbar">
+        <div class="hover">
+            <i class="fa fa-map-marker-alt" style="color:white;" id="ad"></i>
+            <span>Ambattur Industrial Estate, Chennai, Tamil Nadu 600095</span>
+        </div>
+        <div class="hover">
+            <i class="fa fa-envelope-open "style="color:white;" ></i>
+            <a href="mailto:www.flexipacsolutions.com">www.flexipacsolutions.com</a>
+        </div>
+        <div class="hover">
+            <i class="fa fa-phone-alt " style="color:white;"></i>
+            <span>+91-9677388776</span>
+        </div>
+        <div class="hover">
+            <i class="far fa-clock" style="color:white;"></i>
+            <span>Mon - Fri : 9AM - 9PM</span>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="index.html"><img src="/img/logo_flexipac-removebg-preview.png" alt="Flexipac Solutions Logo"></a>
+            <h2 id="compname">Flexipac Solutions</h2>
+        </div>
+        <div class="navbar-links" id="navbarLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="#Gallery">Gallery</a>
+            <a href="cap_faci.html">Capabilities & Facilities</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="social-media">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="navbar-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="/img/IMG_7062.jpeg" alt="Carousel Image 1">
+                <div class="carousel-content">
+                    <h1>Welcome To Flexipac Solutions</h1>
+                    <p>Make your products a great one with our range of packaging solutions</p>
+                    <a href="product.html" class="probtn">Products</a>
+                    <a href="contact.html" class="probtn">Contact Us</a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="/img/IMG_6659.JPG" alt="Carousel Image 2">
+                <div class="carousel-content">
+                    <h1>Smart Security Solution For All Business</h1>
+                    <p>Customer satisfaction is our 1st Moto</p>
+                    <a href="product.html" class="probtn">Products</a>
+                    <a href="contact.html" class="probtn">Contact Us</a>
+                </div>
+            </div>
+           
+        </div>
+        <button class="carousel-prev"><i class="fa fa-chevron-left"></i></button>
+        <button class="carousel-next"><i class="fa fa-chevron-right"></i></button>
+    </div>
+
+    
+    <h1 class="heading">Our Services</h1>
+    <div class="facts-section">
+        
+        <div class="fact">
+            <i class="fa-solid fa-sliders" id="ficon"></i>
+            <h1>01</h1>
+            <h5>Customization</h5>
+            <hr>
+            <p>At FLEXIPAC, our mission is to provide our clients with tailor-made carton box solutions that align
+                with their unique requirements.</p>
+        </div>
+        <div class="fact">
+            <i class="fa-solid fa-truck" id="ficon"></i>
+            <h1>02</h1>
+            <h5>Free Delivery</h5>
+            <hr>
+            <p>At FLEXIPAC, our mission is to provide our clients with tailor-made carton box solutions that align
+                with their unique requirements.</p>
+        </div>
+        <div class="fact">
+            <i class="fa-solid fa-headset" id="ficon"></i>
+            <h1>03</h1>
+            <h5>Online support</h5>
+            <hr>
+            <p>We are committed to enhancing customer satisfaction through on-time completion of projects and services
+                at competitive prices.</p>
+        </div>
+    </div>
+    <!-- About Start -->
+    <h1 class="headingab">About Us</h1>
+    <div class="about-section">
+       
+        <div class="about-container">
+            <div class="about-row">
+              
+               <div class="about-image">
+                    <img src="/img/Die punch machine.jpg" alt="About Us">
+                </div>
+                <div class="about-text">
+                    <div class="about-text-inner">
+                        <div class="about-divider">
+                        <h2 class="abtheading">Welcome to Flexipac Solutions</h2>
+                        <p class=" abtp">
+                            At FLEXIPAC Solutions, we are excited to embark on a journey that celebrates innovation, craftsmanship, and excellence in the field of carton box manufacturing. As a newly established unit, we bring together a passionate team of experts who are dedicated to creating high-quality packaging solutions that cater to a diverse range of industries and businesses.
+                            We FLEXIPAC Solutions, one of the reliable organizations, are engaged in manufacturing a variety of boxes of various ranges.
+                        </p>
+                        <a href="about.html" class="about-button">Explore More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="heading">Our Gallery</h1>
+
+    <div class="gallery">
+
+        
+        <div class="image-container">
+    
+            <a href="/img/4 bar slotter.jpg"class="image ice-cream">
+                <img src="/img/4 bar slotter.jpg" alt="">
+            </a>
+            <a href="/img/IMG_6650.jpg" class="image ice-cream">
+                <img src="/img/IMG_6650.jpg" alt="">
+            </a>
+            <a href="/img/IMG_6653.jpg" class="image ice-cream">
+                <img src="/img/IMG_6653.jpg" alt="">
+            </a>
+    
+            <a href="/img/IMG_6655.jpg" class="image chocolate">
+                <img src="/img/IMG_6655.jpg" alt="">
+            </a>
+            <a href="/img/IMG_6657.jpg" class="image chocolate">
+                <img src="/img/IMG_6657.jpg" alt="">
+            </a>
+    
+            <a href="/img/IMG_6658.jpg" class="image cake">
+                <img src="/img/IMG_6658.JPG" alt="">
+            </a>
+            <a href="/img/IMG_6659.jpg" class="image cake">
+                <img src="/img/IMG_6659.jpg" alt="">
+            </a>
+            <a href="/img/IMG_7062.jpeg" class="image cake">
+                <img src="/img/IMG_7062.jpeg" alt="">
+            </a>
+            <a href="/img/Corrugated box bundle.jpeg" class="image cake">
+                <img src="/img/Corrugated box bundle.jpeg" alt="">
+            </a>
+            <footer class="footer">
+                <div class="footer-container">
+                   
+                    <div class="footer-column logo">
+                       <a href="index.html"><img src="/img/logo_flexipac-removebg-preview.png" alt="Company Logo"></a> 
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#about.html">About</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="cap_faci.html">Capabilities & Facilities</a></li>
+                            <li><a href="#Contact.html">Contact</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Information</h3>
+                        <div class="hover">
+                            <i class="fa fa-map-marker-alt" style="color:white;"></i>
+                            <span>Ambattur Industrial Estate, Chennai, Tamil Nadu 600095</span>
+
+                        </div>
+                        <br>
+                        <div class="hover">
+                            <i class="fa fa-envelope-open "style="color:white;" ></i>
+                            <a href="mailto:www.flexipacsolutions.com">www.flexipacsolutions.com</a>
+                            <br>
+                        </div>
+                        <br>
+                        <div class="hover">
+                            <i class="fa fa-phone-alt " style="color:white;"></i>
+                            <span>+91-9677388776</span>
+                        </div>
+                        <br>
+                        <div class="hover">
+                            <i class="far fa-clock" style="color:white;"></i>
+                            <span>Mon - Fri : 9AM - 9PM</span>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Follow Us</h3>
+                        <div class="social-mediafoo">
+                            <div class="social-iconsfoo" style="margin-left: 70px;" >
+                              <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                              </a>
+                              <a href="#">
+                                <i class="fab fa-twitter"></i>
+                              </a>
+                              <a href="#">
+                                <i class="fab fa-instagram"></i>
+                              </a>
+                              <a href="#">
+                                <i class="fab fa-linkedin-in"></i>
+                              </a>
+                             </div>
+                          </div>
+                        
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Flexipac Solutions. All rights reserved.</p>
+                </div>
+            </footer>     
+    
+
+    <script>
+       function toggleMenu() {
+    var navbarLinks = document.getElementById('navbarLinks');
+    if (navbarLinks.style.display === 'flex') {
+        navbarLinks.style.display = 'none';
+    } else {
+        navbarLinks.style.display = 'flex';
+    }
+}
+
+
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+        const prevButton = document.querySelector('.carousel-prev');
+        const nextButton = document.querySelector('.carousel-next');
+
+        function showSlide(index) {
+            if (index < 0) {
+                currentIndex = totalSlides - 1;
+            } else if (index >= totalSlides) {
+                currentIndex = 0;
+            } else {
+                currentIndex = index;
+            }
+
+            const slideWidth = slides[currentIndex].clientWidth;
+            const offset = -currentIndex * slideWidth;
+
+            document.querySelector('.carousel').style.transform = `translateX(${offset}px)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            showSlide(currentIndex - 1);
+        });
+
+        nextButton.addEventListener('click', () => {
+            showSlide(currentIndex + 1);
+        });
+
+        // Swipe Gesture for Mobile Devices
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        function handleGesture() {
+            if (touchEndX < touchStartX) {
+                showSlide(currentIndex + 1);
+            }
+            if (touchEndX > touchStartX) {
+                showSlide(currentIndex - 1);
+            }
+        }
+
+        document.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleGesture();
+        });
+
+        // Initial slide
+        showSlide(currentIndex);
+    </script>
+</body>
+
+</html>
